@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Parewadi Premier League</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffcc00;
+      animation: slideDown 1.5s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+      animation: slideUp 1.5s ease;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ffcc00;
+      margin-bottom: 25px;
+    }
+
+    .about-text {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: reveal 1.5s forwards;
+    }
+
+    /* ORIGINAL CARD STYLE (reused for buttons) */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      padding: 25px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+      animation: reveal 1.5s forwards;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(255, 204, 0, 0.4);
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: #ffcc00;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>About Parewadi Premier League</h1>
+    <p>Where Village Passion Meets Cricket Power 🏏</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About PPL</h2>
+    <p class="about-text">
+      Parewadi Premier League (PPL) is a village-level cricket tournament that unites
+      young talent, sportsmanship, and local pride. The tournament provides a platform
+      for emerging players to showcase their skills and build unforgettable memories.
+    </p>
+  </section>
+
+  <!-- TOURNAMENT HIGHLIGHTS (BUTTON VERSION ONLY) -->
+  <section>
+    <h2>Tournament Highlights</h2>
+
+    <div class="cards">
+      <a href="teams.html" class="card">
+        🏏
+        <h3>Teams</h3>
+        <p>Participating village teams</p>
+      </a>
+
+      <a href="players.html" class="card">
+        🧑
+        <h3>Player History</h3>
+        <p>Player records & stats</p>
+      </a>
+
+      <a href="matches.html" class="card">
+        📅
+        <h3>Matches</h3>
+        <p>Schedules & results</p>
+      </a>
+
+      <a href="photos.html" class="card">
+        📸
+        <h3>Photos</h3>
+        <p>Memories & highlights</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Parewadi Premier League | Cricket • Community • Culture ❤️
+  </footer>
+
+</body>
+</html>
